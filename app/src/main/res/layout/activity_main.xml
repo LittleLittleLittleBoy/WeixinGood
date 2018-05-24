@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="朋友圈链接:"/>
+    <EditText
+        android:id="@+id/main_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="需要赞的个数"/>
+    <EditText
+        android:id="@+id/main_number"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发布时间"/>
+    <EditText
+        android:id="@+id/main_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2018年5月25日 00:40"/>
+    <Button
+        android:id="@+id/main_to_detail_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成"/>
+
+
+
+
+</LinearLayout>

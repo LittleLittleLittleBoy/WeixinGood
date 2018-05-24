@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:scaleType="fitXY"
+                    android:background="@drawable/imageview_background"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/people"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#5B6B93"
+                        android:text="@string/weixin_name"/>
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comment"/>
+                    <LinearLayout
+                        android:background="#E7E7E7"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:id="@+id/detail_picImage"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/people"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp" />
+                        <TextView
+                            android:id="@+id/detail_desc"
+                            android:textSize="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/detail_date"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2018年5月20日 10:32"/>
+                        <TextView
+                            android:textSize="13sp"
+                            android:textColor="#5B6B93"
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="删除"/>
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <ImageButton
+                            android:src="@drawable/pic2"
+                            android:layout_width="23dp"
+                            android:layout_height="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/background"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="5dp"
+                android:paddingTop="8dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/pic3" />
+                <LinearLayout
+                    android:id="@+id/detail_people_LinerLayout"
+                    android:paddingLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+    <View android:layout_height="1dp" android:background="#E0E0E0" android:layout_width="fill_parent"></View>
+    <LinearLayout
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:background="@drawable/edit_cursor_color"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:hint="评论"
+                android:textSize="17sp"/>
+            <ImageButton
+                android:layout_width="45dp"
+                android:src="@drawable/pic1"
+                android:layout_height="match_parent" />
+            
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="55dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/buttonstyle"
+                android:shadowColor="#ffffffff"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="发送"
+                android:textColor="#DEDEDE" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
