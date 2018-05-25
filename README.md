@@ -50,3 +50,4 @@
 2. 根据截图工具按照第一个头像的左上角进行截图
 
 	<img src="pic/pic5.png" title="Logo" width="200" /> 
+3. 使用python3 修改python/picGet.py 中的路径, 如果出现白边，修改像素大小
