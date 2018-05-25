@@ -59,7 +59,7 @@ public class PeopleUtil {
 
         Random random=new Random();
         while (true){
-            int index=random.nextInt(210);
+            int index=random.nextInt(PeopleUtil.IDs.length);
             if(resources.add(IDs[index])){
                 result[current]=IDs[index];
                 current++;
