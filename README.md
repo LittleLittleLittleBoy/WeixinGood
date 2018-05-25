@@ -1,4 +1,5 @@
-#WeiXinGood
+# WeiXinGood
+
 微信朋友圈详情界面模仿
 
 各个组织营销方式多种多样，最常见的就是分享朋友圈集赞：分享朋友圈集赞领小礼品，分享朋友圈打88折
@@ -10,17 +11,15 @@
 这个app应运而生
 ### 微信截图
 <img src="pic/picreal.png" title="Logo" width="200" /> 
-### 模仿截图
 
+### 模仿截图
 最多可模仿210人点赞(因为apk里面只存放了210个头像……)
-<figure class="third">
-    <img src="pic/pic1.jpg" width="200" >
-    <img src="pic/pic2.jpg" width="200" >
-    <img src="pic/pic3.jpg" width="200" >
-</figure>
+
+<img src="pic/pic1.jpg" width="200" /> 
+<img src="pic/pic2.jpg" width="200" >
+<img src="pic/pic3.jpg" width="200" >
 
 ### 设置微信昵称
-
 修改 values/strings.xml文件中的weixin_name值
 ```
 <resources>
