@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText urlEditText=findViewById(R.id.main_url);
         final EditText numberEditText=findViewById(R.id.main_number);
         final EditText dateText=findViewById(R.id.main_date);
+        final EditText commentText=findViewById(R.id.main_comment);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("url",url);
                 intent.putExtra("num",num);
                 intent.putExtra("date",dateText.getText().toString());
+                intent.putExtra("comment",commentText.getText().toString());
                 startActivity(intent);
             }
         });

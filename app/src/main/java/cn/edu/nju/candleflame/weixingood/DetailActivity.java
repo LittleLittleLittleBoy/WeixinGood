@@ -4,28 +4,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashMap;
@@ -48,6 +45,7 @@ public class DetailActivity extends AppCompatActivity {
         num = intent.getIntExtra("num", 10);
         url = intent.getStringExtra("url");
         String date=intent.getStringExtra("date");
+        String comment=intent.getStringExtra("comment");
 
 
         peopleLinearLayout=findViewById(R.id.detail_people_LinerLayout);
@@ -55,10 +53,13 @@ public class DetailActivity extends AppCompatActivity {
         descView=findViewById(R.id.detail_desc);
         TextView dateView=findViewById(R.id.detail_date);
         dateView.setText(date);
+        TextView commentView=findViewById(R.id.detail_comment);
+        commentView.setText(comment);
 
-        getSerieExtDetail();
+        getWebText();
         getPeopleList();
     }
+
 
     private void getPeopleList() {
         new Thread(new Runnable() {
@@ -71,17 +72,16 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-    public void getSerieExtDetail(){
+    public void getWebText(){
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String serieInfo =DetailActivity.this.url ;
 
                 Map<String, String> map = new HashMap<String, String>();
 
                 Document document = null;
                 try {
-                    document = Jsoup.connect(serieInfo).timeout(5000).get();
+                    document = Jsoup.connect(url).timeout(5000).get();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
